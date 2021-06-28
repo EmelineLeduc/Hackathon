@@ -1,27 +1,18 @@
 import React from 'react';
 
-import logo from './logo.png';
-import './App.css';
+import Chat from './Components/Chat/Chat';
+import Join from './components/Join/Join';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <main className="rsw-container">
-      <div
-        className="rsw-item"
-        style={{
-          paddingBottom: '2rem',
-        }}>
-        <img src={logo} width="20%" alt="WCS logo" />
-      </div>
-      <div className="rsw-item">
-        <p>Welcome to your fresh, lightweight, React App ! &#127752;</p>
-      </div>
-      <div className="rsw-item">
-        <p>
-          Start in the <code>App.jsx</code> component !
-        </p>
-      </div>
-    </main>
+    <>
+      <Router>
+        <Route path="/" exact component={Join} />
+        <Route path="/chat" component={Chat} />
+      </Router>
+    </>
   );
 }
 
