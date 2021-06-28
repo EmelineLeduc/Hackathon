@@ -1,0 +1,14 @@
+#header {
+    height:90px;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    scroll-behavior: fixed;
+}
+
+#logo{
+    width: 106px;
+    height: 30px;
+    position: relative;
+    left:30px;
+}
